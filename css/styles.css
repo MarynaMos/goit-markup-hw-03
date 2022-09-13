@@ -235,6 +235,7 @@ button {
 
 .section-command {
     background-color:#F5F4FA;
+    padding-top: 94px;
 }
 .command {
     display: flex;
