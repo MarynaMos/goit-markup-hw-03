@@ -3,7 +3,11 @@
     --title-color: #212121;
 }
 
-
+.section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+background-color: tomato;
+}
 .container {
     width: 1200px;
 
@@ -28,12 +32,17 @@ body {
     list-style: none;
 }
 .visually-hidden {
-    margin: 0;
+position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
     padding: 0;
-    outline: 0;
-    outline-offset: 0;
+
     white-space: nowrap;
     clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
     clip: rect(0 0 0 0);
     overflow: hidden;
 } 
@@ -57,11 +66,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    
-}
-.section-header {
     border-bottom: 1px solid #ECECEC;
+    
 }
 
 /* Site nav */
@@ -69,18 +75,18 @@ body {
 a {
     text-decoration: none;
 }
+.navigation {
+    margin-left: 93px; 
+}
 .site-nav {
     display: flex;
-    margin-left: 93px; 
+    
 }
 
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
 .site-nav .item { 
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     color: var(--title-color);
     font-weight: 500;
@@ -102,6 +108,11 @@ a {
 }
 /* Contacts */
 
+.link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 .contacts {
     display: flex;
     margin-left: auto;
@@ -155,7 +166,7 @@ button {
     color:#ffffff;
     border-radius: 4px;
     border-style: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
     cursor: pointer;
     line-height: 1.9;
     font-weight: 700;
@@ -165,7 +176,9 @@ button {
 .button:hover
 .button:focus {
     background-color: #188CE8;
-}
+} 
+    /* Button portfolio*/
+
 .btn-portfolio {
     padding: 6px 22px;
 
@@ -180,35 +193,19 @@ button {
     background-color: #2196F3;
     color:#FFFFFF;
 }
-/* Sections */
+.menu .item + .item {
+    margin-left: 8px;
+}
+.menu {
+    display: flex;
 
-.section {
-    padding-bottom: 94px;
-    padding-top: 94px;
-    
-}
-.work {
-    padding-top: 0;
-}
-.section-title {
-    margin-top: 0;
+    justify-content: center;
     margin-bottom: 50px;
+} 
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
-    color: var(--title-color); 
-    text-align: center;
 
-}
-.title {
-    margin-bottom: 10px;
-    margin-top: 0;
 
-    color: var(--title-color);
-    font-size: 14px;
-    line-height: 1.1;
-}
+
 
 
 /* Benefits */
@@ -217,6 +214,9 @@ button {
     display: flex;
     justify-content: center;
 
+}
+.benefits .item {
+    width: 270px;
 }
 .benefits .item + .item {
     margin-left: 30px;
@@ -228,9 +228,27 @@ button {
 }
 /* Work */
 
+.section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--title-color); 
+    text-align: center;
+}
+.title {
+    margin-bottom: 10px;
+    margin-top: 0;
+
+    color: var(--title-color);
+    font-size: 14px;
+    line-height: 1.1;
+}
 .work {
     display: flex;
-    justify-content: center;
+
 }
 .work .item + .item {
     margin-left: 30px;
@@ -248,13 +266,12 @@ button {
 }
 .command {
     display: flex;
-    justify-content: center;
 
 }
-.command .item {
+/*.command .item {
     box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
     border-radius: 0px 0px 4px 4px;
-}
+}*/
 .name {
     padding-top:30px ;
     padding-bottom: 30px;
@@ -292,8 +309,10 @@ button {
 .portfolio .item {
     margin-right: 30px;
     margin-bottom: 30px;
-    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-    border-radius: 0px 0px 4px 4px;
+    width: 370px;
+
+    /*box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 0px 0px 4px 4px;*/
 }
 .portfolio .item:nth-child(3n) {
     margin-right: 0;
@@ -303,11 +322,13 @@ button {
 }
 .portfolio-photo {
     display: block;
-    margin: 0;
-    padding: 0;
+
 }
 .portfolio-description {
-    margin: 20px 24px;
+    padding: 20px 24px;
+    border-left: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
 }
 .text-example {
     margin: 0;
@@ -328,15 +349,6 @@ button {
     
 }
 
-.menu .item + .item {
-    margin-left: 8px;
-}
-.menu {
-    display: flex;
-
-    justify-content: center;
-    padding-bottom: 34px;
-} 
 
 /* Footer */
 
@@ -352,6 +364,8 @@ address {
     color: #FFFFFF;
     line-height: 1.7;
     font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 9px;
 }
 .contacts-footer a {
     color: rgba(255, 255, 255, 0.6);
@@ -360,6 +374,4 @@ address {
 .contacts-footer a:hover, .contacts-footer a:focus {
     color: #2196F3;
 }
-.logo-margin {
-    margin-top: 20px;
-}
+
