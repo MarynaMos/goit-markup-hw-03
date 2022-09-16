@@ -113,9 +113,6 @@ a {
 
 /* Contacts */
 
-.link {
-    
-}
 .contacts {
     display: flex;
     margin-left: auto;
@@ -206,11 +203,6 @@ button {
     margin-bottom: 50px;
 } 
 
-
-
-
-
-
 /* Benefits */
 
 .benefits {
@@ -251,6 +243,7 @@ button {
 }
 .work {
     display: flex;
+    padding-top: 0;
 
 }
 .work .item + .item {
@@ -377,6 +370,9 @@ address {
 .contacts-footer a:hover, .contacts-footer a:focus {
     color: #2196F3;
 }
-.mail {
+.contacts-footer {
+    margin-top: 9px;
+}
+.tel {
     margin-top: 9px;
 }
